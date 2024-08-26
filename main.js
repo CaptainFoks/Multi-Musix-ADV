@@ -118,8 +118,7 @@ client.once('ready', () => {
 
         const randomActivity = activities[Math.floor(Math.random() * activities.length)];
 
-        client.user.setPresence({activities: [{ name:randomActivity.name, type: randomActivity.type }],
-      status: 'idle',});
+        client.user.setPresence({activities: [{ name: `v@1.7`, type: ActivityType.Watching }],status: 'idle',});
         console.log(`Змінено активність на: ${randomActivity.name}`);
     // Викликаємо функцію кожні 2 хвилини
     setInterval(updateActivity, 120000); // 120000 мілісекунд = 2 хвилини
