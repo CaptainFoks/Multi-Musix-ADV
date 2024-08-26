@@ -1,5 +1,6 @@
 
 
+
 const { Client, GatewayIntentBits, ActivityType } = require('discord.js');
 const { EmbedBuilder } = require('discord.js');
 const fs = require('fs');
@@ -108,7 +109,7 @@ client.once('ready', () => {
   setTimeout(() => {
     console.log('\x1b[32m%s\x1b[0m', `|    🎯 Activity sucessfully set!`);
     client.user.setPresence({
-      activities: [{ name: `v@1.7`, type: ActivityType.Watching }],
+      activities: [{ name: `игру нубика`, type: ActivityType.Watching }],
       status: 'idle',
     });
   }, 2000); 
