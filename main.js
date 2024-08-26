@@ -123,7 +123,7 @@ client.once('ready', () => {
         console.log(`Змінено активність на: ${randomActivity.name}`);
     // Викликаємо функцію кожні 2 хвилини
     setInterval(updateActivity, 120000); // 120000 мілісекунд = 2 хвилини
-});
+};
 
 
 login();
