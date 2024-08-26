@@ -111,17 +111,16 @@ client.once('ready', () => {
     // Функція для зміни активності
     function updateActivity() {
         const activities = [
-            { name: 'как нубик лузает лайн', type: 'WATCHING' },
-            { name: 'The Betweenlands', type: 'GAMING'}
+            { name: 'анализ ошибок нубика', type: 'ActivityType.Watching' },
+            { name: 'The Betweenlands', type: 'ActivityType.Gaming'}
             // Додайте інші активності за бажанням
         ];
 
         const randomActivity = activities[Math.floor(Math.random() * activities.length)];
 
-        client.user.setActivity(randomActivity.name, { type: randomActivity.type, url: randomActivity.url });
+        client.user.setPresence({activities: [{ name:randomActivity.name, type: randomActivity.type }],
+      status: 'idle',},2000);
         console.log(`Змінено активність на: ${randomActivity.name}`);
-    }
-
     // Викликаємо функцію кожні 2 хвилини
     setInterval(updateActivity, 120000); // 120000 мілісекунд = 2 хвилини
 });
