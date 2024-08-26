@@ -106,23 +106,14 @@ async function login() {
 
 
 client.once('ready', () => {
-    console.log('Бот готов!');
-
-    // Функція для зміни активності
-    function updateActivity() {
-        const activities = [
-            { name: 'анализ ошибок нубика', type: 'ActivityType.Watching' },
-            { name: 'The Betweenlands', type: 'ActivityType.Gaming'}
-            // Додайте інші активності за бажанням
-        ];
-
-        const randomActivity = activities[Math.floor(Math.random() * activities.length)];
-
-        client.user.setPresence({activities: [{ name: `v@1.7`, type: ActivityType.Watching }],status: 'idle',});
-        console.log(`Змінено активність на: ${randomActivity.name}`);
-    // Викликаємо функцію кожні 2 хвилини
-    setInterval(updateActivity, 120000); // 120000 мілісекунд = 2 хвилини
-};
+  setTimeout(() => {
+    console.log('\x1b[32m%s\x1b[0m', `|    🎯 Activity sucessfully set!`);
+    client.user.setPresence({
+      activities: [{ name: `The Betweenlands`, type: ActivityType.Gaming }],
+      status: 'idle',
+    });
+  }, 2000); 
+});
 
 
 login();
