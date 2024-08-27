@@ -1,6 +1,5 @@
 
 
-
 const { Client, GatewayIntentBits, ActivityType } = require('discord.js');
 const { EmbedBuilder } = require('discord.js');
 const fs = require('fs');
@@ -127,5 +126,4 @@ setInterval(() => {
 }, 15000);
 
 module.exports = client;
-
 
